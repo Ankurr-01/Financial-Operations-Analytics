@@ -11,10 +11,10 @@ A comprehensive end-to-end financial analytics project covering revenue forecast
 
 ### 💡 Key Results
 
-- 📈 **Revenue Forecast**: ${forecast.sum():,.0f} predicted for next 12 months
-- 🎯 **Churn Model Accuracy**: {churn_results[best_churn_model_name]['roc_auc']:.1%} ROC AUC
-- 💰 **Identified Value**: ${at_risk_mrr * 12:,.0f} annual revenue at risk
-- 👥 **Customer Segments**: {optimal_k} distinct groups with targeted strategies
+- 📈 **Revenue Forecast**: **$15,717,892** predicted for the next 12 months
+- 🎯 **Churn Model Accuracy**: **100.0% ROC AUC** (Random Forest)
+- 💰 **Identified Value**: **$2,000,976** annual revenue at risk
+- 👥 **Customer Segments**: **RFM segmentation and K-Means clustering** for targeted customer strategies
 
 ---
 
@@ -172,27 +172,27 @@ scipy>=1.7.0
 ## 📈 Key Findings & Recommendations
 
 ### Revenue Insights
-- Revenue growing at **{revenue_growth_rate:+.1f}%** over 6-month period
+- Revenue growing at **+13.3%** over 6-month period
 - Strong seasonality detected with Q4 peaks
-- Forecasted **${forecast.sum()/1e6:.1f}M** revenue for next 12 months
-- Model accuracy: **{100-mape:.1f}%**
+- Forecasted **$15.7M** revenue for next 12 months
+- orecast Model Error (MAPE): **0.73%**
 
 ### Churn Analysis
-- Overall churn rate: **{churn_rate_current:.1f}%**
-- **{len(at_risk):,}** customers at high risk (>50% probability)
-- **${at_risk_mrr * 12:,.0f}** annual revenue at risk
+- Overall churn rate: **13.1%**
+- **652** customers at high risk (>50% probability)
+- **$2,000,976** annual revenue at risk
 - Top churn predictors: usage score, NPS, support tickets
 
 ### Profitability
-- **{profitability['Gross_Profit'].idxmax()}** segment most profitable
-- Average CLV: **${avg_clv_current:,.0f}**
-- CLV to CAC ratio: **{avg_clv_current/500:.1f}x** (assuming $500 CAC)
-- Payback period: **{customers['payback_months'].mean():.1f} months**
+- **Small Business** segment most profitable
+- Average CLV: **$7,167**
+- CLV to CAC ratio: **14.33x** (assuming $500 CAC)
+- Payback period: **5.0 months**
 
 ### Strategic Recommendations
 
 **Immediate Actions:**
-1. Contact {len(at_risk):,} at-risk customers
+1. Contact 652 at-risk customers
 2. Implement churn prediction in CRM
 3. Launch retention campaign for high-risk segments
 
@@ -203,7 +203,7 @@ scipy>=1.7.0
 4. A/B test retention strategies
 
 **Long-term (6-12 months):**
-1. Reduce churn by 20% (save ${at_risk_mrr * 0.2 * 12:,.0f}/year)
+1. Reduce churn by 20% (save approximately **$400,195/year**)
 2. Expand highest-value segments
 3. Build real-time prediction system
 4. Achieve {revenue_growth_rate * 1.2:.0f}% growth rate
@@ -214,7 +214,7 @@ scipy>=1.7.0
 
 ### 1. Data Generation
 Since this is a learning project, we generated realistic synthetic data:
-- **{len(customers):,}** customers across {len(transactions):,} transactions
+- **5,000** customers across a comprehensive synthetic transaction dataset
 - **5-year** historical period (2020-2024)
 - Realistic patterns: seasonality, churn, growth trends
 - Multiple customer segments and plans
